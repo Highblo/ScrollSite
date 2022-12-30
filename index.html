@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ScrollSite</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h3>Scroll Down</h3>
+    <h2 class="text">Scroll To See Magic</h2>
     <section>
       <h2 class="innerText">Scroll To See Magic</h2>
     </section>
@@ -18,20 +19,48 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corrupti
         repellendus, eius culpa impedit aliquid cumque non, recusandae eveniet
         magni accusamus odio quos dolorem corporis accusantium at rem tempora
-        consequuntur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corrupti
-        repellendus, eius culpa impedit aliquid cumque non, recusandae eveniet
-        magni accusamus odio quos dolorem corporis accusantium at rem tempora
-        consequuntur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corrupti
-        repellendus, eius culpa impedit aliquid cumque non, recusandae eveniet
-        magni accusamus odio quos dolorem corporis accusantium at rem tempora
-        consequuntur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corrupti
-        repellendus, eius culpa impedit aliquid cumque non, recusandae eveniet
-        magni accusamus odio quos dolorem corporis accusantium at rem tempora
-        consequuntur.
+        consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nihil corrupti repellendus, eius culpa impedit aliquid cumque non,
+        recusandae eveniet magni accusamus odio quos dolorem corporis
+        accusantium at rem tempora consequuntur. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Nihil corrupti repellendus, eius culpa
+        impedit aliquid cumque non, recusandae eveniet magni accusamus odio quos
+        <br>
+        <br>
+        dolorem corporis accusantium at rem tempora consequuntur. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Nihil corrupti repellendus,
+        eius culpa impedit aliquid cumque non, recusandae eveniet magni
+        accusamus odio quos dolorem corporis accusantium at rem tempora
+        consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nihil corrupti repellendus, eius culpa impedit aliquid cumque non,
+        recusandae eveniet magni accusamus odio quos dolorem corporis
+        accusantium at rem tempora consequuntur. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Nihil corrupti repellendus, eius culpa
+        impedit aliquid cumque non, recusandae eveniet magni accusamus odio quos
+        <br>
+        <br>
+        dolorem corporis accusantium at rem tempora consequuntur. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Nihil corrupti repellendus,
+        eius culpa impedit aliquid cumque non, recusandae eveniet magni
+        accusamus odio quos dolorem corporis accusantium at rem tempora
+        consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nihil corrupti repellendus, eius culpa impedit aliquid cumque non,
+        recusandae eveniet magni accusamus odio quos dolorem corporis
+        accusantium at rem tempora consequuntur.
       </p>
     </div>
+
+    <script>
+      const section = document.querySelector("section");
+      const text = document.querySelector(".text");
+      const innerText = document.querySelector(".innerText");
+
+      window.addEventListener("scroll", () => {
+        const value = scrollY;
+        section.style.clipPath = `circle(${value}px at center center)`;
+        text.style.left = `${100 - value / 5}%`;
+        innerText.style.left = `${100 - value / 5}%`;
+      });
+    </script>
   </body>
 </html>
