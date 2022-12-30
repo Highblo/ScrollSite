@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffee57;
+}
+
+h3 {
+
+}
+
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0e112e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(300px at center center);
+}
+
+.container {
+  position: relative;
+  margin-top: 200vh;
+  background: #0e112e;
+  padding: 100px;
+  color: #fff;
+}
